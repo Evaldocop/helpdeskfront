@@ -1,14 +1,17 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "79f1c321-49a1-4d9d-849d-895038e5b8e0"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "helpdeskfront": {
+    "helpdesk": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "inlineTemplate": true,
-          "inlineStyle": true,
+          "inlineTemplate": false,
+          "inlineStyle": false,
           "skipTests": true
         },
         "@schematics/angular:class": {
@@ -40,7 +43,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/helpdeskfront",
+            "outputPath": "dist/helpdesk",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,6 +53,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -91,10 +95,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "helpdeskfront:build:production"
+              "browserTarget": "helpdesk:build:production"
             },
             "development": {
-              "browserTarget": "helpdeskfront:build:development"
+              "browserTarget": "helpdesk:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -102,11 +106,11 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "helpdeskfront:build"
+            "browserTarget": "helpdesk:build"
           }
         }
       }
     }
   },
-  "defaultProject": "helpdeskfront"
+  "defaultProject": "helpdesk"
 }
