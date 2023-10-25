@@ -28,7 +28,7 @@ export class TecnicoDeleteComponent implements OnInit {
     private service: TecnicoService,
     private toast:    ToastrService,
     private router:          Router,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute ) { }
 
   ngOnInit(): void { 
     this.tecnico.id = this.route.snapshot.paramMap.get('id');
