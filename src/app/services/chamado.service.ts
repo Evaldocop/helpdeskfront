@@ -30,4 +30,8 @@ export class ChamadoService {
   delete(id: any): Observable<Chamado> {
     return this.http.delete<Chamado>(`${API_CONFIG.baseUrl}/chamados/${id}`);
   }
-}
+
+  
+    
+  }
+

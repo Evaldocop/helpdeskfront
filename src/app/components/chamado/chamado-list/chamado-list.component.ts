@@ -36,6 +36,34 @@ export class ChamadoListComponent implements OnInit {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
+  retornaStatus(status :any): string {
+    switch(status){
+     case 0: return 'Aberto'
+             break;
+     case 1: return 'Andamento'
+             break;
+     default: return 'Encerrado'
+    }
+  }
+    retornaPrioridade(prioridade :any): string {
+      switch(prioridade){
+       case 0: return 'Baixa'
+               break;
+       case 1: return 'Média'
+               break;
+       default: return 'Alta'
+      }
+    
+  }
 
+  orderByStatus(status:any):void{
+    let chamadosFitrados : Chamado[]=[];
+    this.ELEMENT_DATA.forEach(element=>{
+          if(element.status==status)
+            chamadosFitrados.push(element)
+    });
+    this.dataSource = new MatTableDataSource(chamadosFitrados);
+    this.dataSource.paginator = this.paginator;
 
+  }
 }
