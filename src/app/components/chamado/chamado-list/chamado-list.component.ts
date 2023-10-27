@@ -10,7 +10,7 @@ import { ChamadoService } from 'src/app/services/chamado.service';
   styleUrls: ['./chamado-list.component.css']
 })
 export class ChamadoListComponent implements OnInit {
-
+  selected:string;
   ELEMENT_DATA: Chamado[] = []
    
 
