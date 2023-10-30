@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './chamado-update.component.html',
   styleUrls: ['./chamado-update.component.css']
 })
-export class ChamdaoUpdateComponent implements OnInit {
+export class ChamadoUpdateComponent implements OnInit {
 
   constructor() { }
 
