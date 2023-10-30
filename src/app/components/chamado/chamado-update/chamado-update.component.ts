@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-chamdao-update',
-  templateUrl: './chamdao-update.component.html',
-  styleUrls: ['./chamdao-update.component.css']
+  selector: 'app-chamado-update',
+  templateUrl: './chamado-update.component.html',
+  styleUrls: ['./chamado-update.component.css']
 })
 export class ChamdaoUpdateComponent implements OnInit {
 
