@@ -19,12 +19,12 @@ export class ChamadoService {
     return this.http.get<Chamado[]>(`${API_CONFIG.baseUrl}/chamados`);
   }
 
-  create(tecnico: Chamado): Observable<Chamado> {
-    return this.http.post<Chamado>(`${API_CONFIG.baseUrl}/chamados`, tecnico);
+  create(chamado: Chamado): Observable<Chamado> {
+    return this.http.post<Chamado>(`${API_CONFIG.baseUrl}/chamados`, chamado);
   }
 
-  update(tecnico: Chamado): Observable<Chamado> {
-    return this.http.put<Chamado>(`${API_CONFIG.baseUrl}/chamados/${tecnico.id}`, tecnico);
+  update(chamado: Chamado): Observable<Chamado> {
+    return this.http.put<Chamado>(`${API_CONFIG.baseUrl}/chamados/${chamado.id}`, chamado);
   }
 
   delete(id: any): Observable<Chamado> {
